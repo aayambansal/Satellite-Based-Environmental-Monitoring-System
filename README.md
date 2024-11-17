@@ -2,7 +2,6 @@
 
 A real-time environmental monitoring system built with Node.js and ECharts that visualizes satellite data to track urban development and environmental changes.
 
-[![Stars](https://img.shields.io/github/stars/username/environmental-monitor?style=social)](https://github.com/username/environmental-monitor/stargazers)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
 
