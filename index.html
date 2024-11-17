@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Monitoring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Environmental Monitoring Dashboard</h1>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Environmental Metrics Chart -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Environmental Metrics</h2>
+                <div id="metricsChart" class="h-[400px]"></div>
+            </div>
+
+            <!-- Current Stats -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Current Statistics</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-green-50 rounded-lg">
+                        <h3 class="font-bold">Green Space</h3>
+                        <p id="greenSpace" class="text-2xl text-green-600">--</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <h3 class="font-bold">Urban Density</h3>
+                        <p id="urbanDensity" class="text-2xl text-blue-600">--</p>
+                    </div>
+                    <div class="p-4 bg-purple-50 rounded-lg">
+                        <h3 class="font-bold">Air Quality</h3>
+                        <p id="airQuality" class="text-2xl text-purple-600">--</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 rounded-lg">
+                        <h3 class="font-bold">Forest Cover</h3>
+                        <p id="forestCover" class="text-2xl text-orange-600">--</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
