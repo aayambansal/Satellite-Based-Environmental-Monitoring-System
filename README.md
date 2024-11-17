@@ -162,7 +162,6 @@ npm run dev
 
 ## Acknowledgments
 
-- Built as part of the NYAS Junior Academy Challenge
 - Sample data structure inspired by NASA Earth Data
 - Dashboard design influenced by modern environmental monitoring systems
 
