@@ -1,132 +1,122 @@
-# Environmental Monitoring Dashboard 🌍
+# Environmental Monitoring Dashboard
 
-A real-time environmental monitoring system that visualizes satellite data to track urban development and environmental changes. This project combines data visualization and environmental metrics to provide insights into urban development patterns.
+A real-time environmental monitoring system built with Node.js and ECharts that visualizes satellite data to track urban development and environmental changes.
 
-![Dashboard Preview](https://via.placeholder.com/800x400)
+## Quick Start
 
-## System Architecture 
+```bash
+# Clone repository
+git clone https://github.com/yourusername/environmental-monitor.git
 
-```mermaid
-flowchart TB
-    subgraph Client["Frontend"]
-        UI["User Interface"]
-        Charts["Charts & Visualizations"]
-        State["State Management"]
-    end
+# Install dependencies
+npm install
 
-    subgraph Server["Backend"]
-        API["REST API"]
-        Static["Static File Serving"]
-        Cache["Data Cache"]
-    end
+# Start server
+npm start
 
-    subgraph External["External Services"]
-        NASA["NASA Earth Data API"]
-        GEE["Google Earth Engine"]
-        GFW["Global Forest Watch API"]
-    end
-
-    UI --> State
-    Charts --> State
-    State --> API
-    API --> External
-    API --> Cache
+# Access the dashboard
+Visit http://localhost:3000
 ```
 
-## 🌟 Features
+## Features
 
-- **Real-time Environmental Metrics**
-  - Green space percentage tracking
-  - Urban density monitoring
-  - Air quality index
-  - Forest cover analysis
+- Real-time environmental metrics visualization
+- Interactive time series charts
+- Responsive dashboard design
+- Simple REST API for data access
+- Sample satellite data integration
 
-- **Interactive Visualizations**
-  - Time series analysis
-  - Trend comparisons
-  - Statistical overviews
+## Tech Stack
 
-- **Responsive Design**
-  - Mobile-friendly interface
-  - Adaptive charts
-  - Real-time updates
+- Node.js/Express.js for backend
+- ECharts for data visualization
+- Tailwind CSS for styling
+- Vanilla JavaScript for frontend logic
 
-## 🚀 Demo
+## Project Structure
 
-View the live demo: [Environmental Monitor Demo](http://your-demo-link.com)
-
-### Sample Visualizations
-
-#### Environmental Metrics Over Time
-![Metrics Chart](https://via.placeholder.com/600x300)
-
-#### Current Statistics
-![Statistics](https://via.placeholder.com/600x300)
-
-## 🛠️ Technology Stack
-
-- **Frontend**
-  - HTML5
-  - CSS3 with Tailwind CSS
-  - JavaScript
-  - ECharts for visualizations
-
-- **Backend**
-  - Node.js
-  - Express.js
-
-- **External APIs**
-  - NASA Earth Data API
-  - Google Earth Engine
-  - Global Forest Watch API
-
-## ⚙️ Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/environmental-monitor.git
-   cd environmental-monitor
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the server**
-   ```bash
-   npm start
-   ```
-
-4. **Open in browser**
-   ```
-   http://localhost:3000
-   ```
-
-## 📁 Project Structure
 ```
-environmental-monitor/
-├── index.html          # Main HTML file
+.
+├── index.html          # Main dashboard interface
+├── app.js             # Frontend JavaScript
+├── server.js          # Express server
 ├── style.css          # Custom styles
-├── app.js            # Frontend JavaScript
-├── server.js         # Backend server
-└── package.json      # Project dependencies
+└── package.json       # Project dependencies
 ```
 
-## 🔧 Configuration
+## API Endpoints
 
-Create a `.env` file in the root directory:
-
-```env
-PORT=3000
-NASA_API_KEY=your_nasa_api_key
-GEE_API_KEY=your_gee_api_key
-GFW_API_KEY=your_gfw_api_key
+```bash
+GET /api/environmental-data
+# Returns environmental metrics time series data
 ```
 
-## 📊 Sample Results
+Response format:
+```json
+[
+  {
+    "date": "2023",
+    "greenSpace": 30,
+    "urbanDensity": 70,
+    "airQuality": 72,
+    "forestCover": 28
+  }
+]
+```
 
-### Environmental Change Metrics (2018-2023)
+## Sample Data
 
-| Year | Green Space | Urban Density | Air Quality | Forest Cover |
-|------|------------|---------------|-------------|
+The dashboard currently uses sample data with the following metrics:
+
+| Metric | Description | Sample Range |
+|--------|-------------|--------------|
+| Green Space | Vegetation coverage | 30-45% |
+| Urban Density | Built-up area | 55-70% |
+| Air Quality | Air quality index | 72-85 |
+| Forest Cover | Forest coverage | 28-40% |
+
+## Development
+
+```bash
+# Run in development mode with nodemon
+npm run dev
+```
+
+## Dependencies
+
+- express: ^4.18.2
+- cors: ^2.8.5
+- nodemon (dev): ^3.0.2
+
+## Browser Support
+
+- Chrome (Latest)
+- Firefox (Latest)
+- Safari (Latest)
+- Edge (Latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built as part of the NYAS Junior Academy Challenge
+- Sample data structure inspired by NASA Earth Data
+- Dashboard design influenced by modern environmental monitoring systems
+
+## Future Enhancements
+
+- [ ] Real API integrations
+- [ ] User authentication
+- [ ] Data export features
+- [ ] More visualization types
+- [ ] Historical data comparison
